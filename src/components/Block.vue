@@ -38,7 +38,8 @@ export default {
 .block {
   width: 400px;
   border-radius: 20px;
-  background: #0faf87;
+  background-image: url("../../public/img/cowboy_01.png");
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
   padding: 100px 0;
