@@ -64,7 +64,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #444;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 body {
   margin: 0;
@@ -107,9 +107,13 @@ button[disabled] {
   border-radius: 50px;
   border: 2px solid #5e5747;
   width: max-content;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 .bg_temp {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 35px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: fit-content;
 }
 </style>

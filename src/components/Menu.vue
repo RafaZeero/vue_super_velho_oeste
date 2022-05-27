@@ -56,8 +56,10 @@ export default {
   }
 }
 .menu_items {
+  color: #fff;
   font-size: 2.25em;
   border: 1px solid #f45612;
+  cursor: pointer;
 }
 .menu_items:hover {
   font-size: 2.5em;
