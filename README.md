@@ -22,8 +22,9 @@ O maior desafio desse projeto foi realizá-lo com o framework [Vue.js](https://v
 ### Screenshot
 
 <div style="display: inline-block"  align="center"><br>
-    <img height="250em" src="./src/assets/project_img01.PNG" align="center" alt="Imagem laptop com legenda: developer" >
-   <img height="250em" src="./src/assets/project_img02.PNG" align="center" alt="Imagem laptop com legenda: developer" >
+    <img height="250em" src="./src/assets/project_img01.PNG" align="center" alt="Imagem do projeto versão Desktop" >
+   <img height="250em" src="./src/assets/project_img02.PNG" align="center" alt="Imagem do projeto versão Mobile" >
+   <img height="250em" src="./src/assets/project_img03.PNG" align="center" alt="Imagem do vilão Va Cowboy" >
   <br><br>
 </div>
 
