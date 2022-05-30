@@ -56,10 +56,11 @@ export default {
       this.isPlaying = false;
       this.showResults = true;
       this.scorePointsList.push(this.scorePoints);
-      localStorage.setItem(
-        "scorePointsList",
-        JSON.stringify(this.scorePointsList)
-      );
+      // Em Breve Adicionar Pontuação no Local Storage
+      // localStorage.setItem(
+      //   "scorePointsList",
+      //   JSON.stringify(this.scorePointsList)
+      // );
     },
     closeGameMenu() {
       this.showMenu = false;
