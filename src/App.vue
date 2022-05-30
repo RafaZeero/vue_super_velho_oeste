@@ -1,5 +1,8 @@
 <template>
-  <h1 class="game_title" @click="toggleMenu">Super Velho Oeste</h1>
+  <div>
+    <h1 v-if="isPlaying" class="game_title">Super Velho Oeste</h1>
+    <h1 v-else class="game_title" @click="toggleMenu">Super Velho Oeste</h1>
+  </div>
   <Menu
     v-if="showMenu"
     @startGame="startGame"
@@ -12,24 +15,30 @@
     <Block v-if="isPlaying" :delay="delay" @end="endGame" />
     <Results v-if="showResults" :score="score" :scorePoints="scorePoints" />
   </div>
+  <div v-if="showInstructions">
+    <Instructions @close="toggleInstructions" />
+  </div>
 </template>
 
 <script>
 import Block from "./components/Block";
 import Results from "./components/Results";
 import Menu from "./components/Menu";
+import Instructions from "./components/Instructions";
 
 export default {
   name: "App",
-  components: { Block, Results, Menu },
+  components: { Block, Results, Menu, Instructions },
   data() {
     return {
       isPlaying: false,
       delay: null,
       score: null,
-      scorePoints: null,
+      showInstructions: false,
       showResults: false,
       showMenu: true,
+      showScorePoints: false,
+      scorePoints: null,
       scorePointsList: [],
     };
   },
@@ -37,6 +46,7 @@ export default {
     startGame() {
       // set time amount (ms)
       this.delay = 2000 + Math.random() * 5000;
+
       this.isPlaying = true;
       this.showResults = false;
     },
@@ -56,9 +66,13 @@ export default {
     },
     closeGameMenu() {
       this.showMenu = false;
+      this.toggleInstructions();
     },
     toggleMenu() {
       this.showMenu = true;
+    },
+    toggleInstructions() {
+      this.showInstructions = !this.showInstructions;
     },
   },
   mounted() {},
@@ -72,7 +86,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(26, 26, 26);
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  /* height: calc(100% - 15px); */
 }
 body {
   margin: 0;
@@ -86,7 +101,7 @@ body {
 @media (max-width: 769px) {
   body {
     background-position: top;
-    background-size: 280%;
+    background-size: 270%;
   }
 }
 button {
@@ -114,7 +129,8 @@ button[disabled] {
   border-radius: 50px;
   border: 2px solid #5e5747;
   width: max-content;
-  margin: 0 auto 10px;
+  /* box-sizing: border-box; */
+  margin: 0px auto 10px;
 }
 .bg_temp {
   background: #dec590e4;

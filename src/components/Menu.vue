@@ -1,17 +1,34 @@
 <template>
   <div class="menu_container">
     <h1 class="menu_items" @click="closeMenu">Jogar</h1>
-    <h2 class="menu_items">Instruções</h2>
-    <h2 class="menu_items">Pontuações</h2>
+    <h2 class="menu_items" @click="toggleInstructions">Instruções</h2>
+    <h2 class="menu_items" @click="underConstruction">Pontuações</h2>
+  </div>
+  <div v-if="showInstructions">
+    <Instructions @close="toggleInstructions" />
   </div>
 </template>
 
 <script>
+import Instructions from "./Instructions";
+
 export default {
   props: ["showMenu"],
+  components: { Instructions },
+  data() {
+    return {
+      showInstructions: false,
+    };
+  },
   methods: {
     closeMenu() {
       this.$emit("closeGameMenu", this.closeGameMenu);
+    },
+    toggleInstructions() {
+      this.showInstructions = !this.showInstructions;
+    },
+    underConstruction() {
+      confirm("Em Construção!!");
     },
   },
 };
@@ -44,9 +61,7 @@ export default {
     flex-direction: column;
   }
   .menu_items {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-fill-color: #ffffff;
+    color: #000 !important;
     font-size: 2.25em;
   }
 }

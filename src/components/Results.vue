@@ -44,9 +44,7 @@ export default {
   font-weight: bold;
 }
 .rank {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
-  -webkit-text-fill-color: #ffffff;
+  color: #000;
   margin-top: 50px;
   font-size: 2.125em;
   font-weight: bold;
