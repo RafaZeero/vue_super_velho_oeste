@@ -11,7 +11,6 @@ export default {
   props: ["showMenu"],
   methods: {
     closeMenu() {
-      console.log("close menu");
       this.$emit("closeGameMenu", this.closeGameMenu);
     },
   },
@@ -33,32 +32,27 @@ export default {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  /* padding: 200px; */
-  border: 1px solid #f78942;
 }
 
 @media (max-width: 426px) {
   .menu_container {
-    background: url("../../public/img/bg_menu_cell.png");
+    background-image: url("../../public/img/bg_menu_cell.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 30rem;
-    border: 1px solid #f45612;
     display: flex;
     flex-direction: column;
   }
   .menu_items {
-    /* color: #eb6226; */
-    color: #5e5747;
-    text-shadow: -2px 1px #eb6226;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-fill-color: #ffffff;
     font-size: 2.25em;
-    border: 1px solid #1bde6c;
   }
 }
 .menu_items {
   color: #fff;
   font-size: 2.25em;
-  border: 1px solid #f45612;
   cursor: pointer;
 }
 .menu_items:hover {

@@ -45,7 +45,6 @@ export default {
 
 <style>
 .block {
-  /* width: 400px; */
   border-radius: 20px;
   background-image: url("../../public/img/cow_cowboy.png");
   background-repeat: no-repeat;

@@ -37,7 +37,6 @@ export default {
   padding: 8px 16px;
   border-radius: 50px;
   border: 2px solid #5e5747;
-  /* width: max-content; */
   margin: 20px auto;
 }
 .king {
@@ -50,11 +49,9 @@ export default {
   -webkit-text-fill-color: #ffffff;
   margin-top: 50px;
   font-size: 2.125em;
-  /* color: #fff; */
   font-weight: bold;
   max-width: 450px;
   width: fit-content;
   word-break: normal;
-  /* background: #fff; */
 }
 </style>

@@ -71,7 +71,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #444;
+  color: rgb(26, 26, 26);
   margin-top: 15px;
 }
 body {
@@ -106,7 +106,6 @@ button[disabled] {
 }
 .game_title {
   font-size: 2rem;
-  /* color: #5e5747; */
   background-color: #dec590;
   padding: 8px 16px;
   -webkit-text-stroke-width: 1px;
