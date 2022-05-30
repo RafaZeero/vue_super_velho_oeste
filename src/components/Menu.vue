@@ -2,7 +2,7 @@
   <div class="menu_container">
     <h1 class="menu_items" @click="closeMenu">Jogar</h1>
     <h2 class="menu_items">Instruções</h2>
-    <h2 class="menu_items">Pontuação</h2>
+    <h2 class="menu_items">Pontuações</h2>
   </div>
 </template>
 

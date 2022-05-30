@@ -6,11 +6,11 @@
     :showMenu="showMenu"
     @closeGameMenu="closeGameMenu"
   />
-  <div class="bg_temp">
-    <h2>Seja mais rápido que os vilões!</h2>
+  <div v-else class="bg_temp">
+    <h2>Seja mais rápido que o vilão!!</h2>
     <button @click="startGame" :disabled="isPlaying">Começar</button>
     <Block v-if="isPlaying" :delay="delay" @end="endGame" />
-    <Results v-if="showResults" :score="score" />
+    <Results v-if="showResults" :score="score" :scorePoints="scorePoints" />
   </div>
 </template>
 
@@ -27,8 +27,10 @@ export default {
       isPlaying: false,
       delay: null,
       score: null,
+      scorePoints: null,
       showResults: false,
       showMenu: true,
+      scorePointsList: [],
     };
   },
   methods: {
@@ -38,13 +40,19 @@ export default {
       this.isPlaying = true;
       this.showResults = false;
     },
-    endGame(reactionTime) {
+    endGame({ reactionTime, totalPoints }) {
       this.score = reactionTime;
+      this.scorePoints = totalPoints;
       this.isPlaying = false;
       this.showResults = true;
+      this.scorePointsList.push(this.scorePoints);
+      localStorage.setItem(
+        "scorePointsList",
+        JSON.stringify(this.scorePointsList)
+      );
       setTimeout(() => {
         this.showResults = false;
-      }, 15 * 1000);
+      }, 10 * 1000);
     },
     closeGameMenu() {
       this.showMenu = false;
@@ -82,7 +90,7 @@ body {
   }
 }
 button {
-  background: #0faf87;
+  background: #5e5747;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -110,10 +118,11 @@ button[disabled] {
   margin: 0 auto 10px;
 }
 .bg_temp {
-  background: rgba(255, 255, 255, 0.6);
+  background: #dec590e4;
   border-radius: 35px;
   margin: 0 auto;
   padding: 2rem;
   width: fit-content;
+  height: 500px;
 }
 </style>

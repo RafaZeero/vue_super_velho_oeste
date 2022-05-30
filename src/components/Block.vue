@@ -1,5 +1,5 @@
 <template>
-  <div class="block" v-show="showBlock" @click="stopTimer">Clique aqui</div>
+  <div class="block" v-show="showBlock" @click="stopTimer"></div>
 </template>
 
 <script>
@@ -10,6 +10,7 @@ export default {
       showBlock: false,
       timer: null,
       reactionTime: 0,
+      totalPoints: 0,
     };
   },
   mounted() {
@@ -23,12 +24,20 @@ export default {
       // start the timer, tick every 10ms
       this.timer = setInterval(() => {
         this.reactionTime += 10;
+        if (this.reactionTime > 2000) {
+          this.totalPoints = 0;
+        } else {
+          this.totalPoints = -this.reactionTime / 2 + 1000;
+        }
       }, 10);
     },
     stopTimer() {
       // stop the timer
       clearInterval(this.timer);
-      this.$emit("end", this.reactionTime);
+      this.$emit("end", {
+        reactionTime: this.reactionTime,
+        totalPoints: this.totalPoints,
+      });
     },
   },
 };
@@ -38,10 +47,12 @@ export default {
 .block {
   /* width: 400px; */
   border-radius: 20px;
-  background-image: url("../../public/img/cowboy_01.png");
+  background-image: url("../../public/img/cow_cowboy.png");
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   padding: 100px 0;
   margin: 40px auto;
+  height: 75px;
 }
 </style>
