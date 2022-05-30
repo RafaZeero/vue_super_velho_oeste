@@ -60,9 +60,6 @@ export default {
         "scorePointsList",
         JSON.stringify(this.scorePointsList)
       );
-      setTimeout(() => {
-        this.showResults = false;
-      }, 10 * 1000);
     },
     closeGameMenu() {
       this.showMenu = false;
