@@ -61,9 +61,3 @@ Ao usar o Vue.js, eu também acho que pude melhorar meu entendimento de React.js
     </td>
   </tr>
 </table>
-
-Você já experimentou o Vue.js? Saindo um pouco do queridíssimo mundo do React.js, decidi experimentar o framework Vue.js e que framework incrível!!
-
-Fiz um projeto chamado Super Velho Oeste, onde você tem a missão de derrotar o vilão Va Cowboy.
-
-Confira: https://vue-super-velho-oeste.vercel.app/
