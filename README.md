@@ -23,7 +23,7 @@ O maior desafio desse projeto foi realizá-lo com o framework [Vue.js](https://v
 
 <div style="display: inline-block"  align="center"><br>
     <img height="250em" src="./src/assets/project_img01.PNG" align="center" alt="Imagem laptop com legenda: developer" >
-   <img height="250em" src="./src/assets/project_img01.PNG" align="center" alt="Imagem laptop com legenda: developer" >
+   <img height="250em" src="./src/assets/project_img02.PNG" align="center" alt="Imagem laptop com legenda: developer" >
   <br><br>
 </div>
 
