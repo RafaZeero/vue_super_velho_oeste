@@ -54,5 +54,6 @@ export default {
   padding: 100px 0;
   margin: 40px auto;
   height: 75px;
+  cursor: crosshair;
 }
 </style>
