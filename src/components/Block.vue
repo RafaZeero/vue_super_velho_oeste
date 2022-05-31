@@ -5,6 +5,7 @@
 <script>
 export default {
   props: ["delay"],
+  emits: ["end"],
   data() {
     return {
       showBlock: false,
@@ -46,7 +47,7 @@ export default {
 <style>
 .block {
   border-radius: 20px;
-  background-image: url("../../public/img/cow_cowboy.png");
+  background-image: url("../assets/img/cow_cowboy.png");
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;

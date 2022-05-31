@@ -91,7 +91,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url("../public/img/bg_main.jpg");
+  background: url("../src/assets/img/bg_main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

@@ -14,6 +14,7 @@ import Instructions from "./Instructions";
 
 export default {
   props: ["showMenu"],
+  emits: ["closeGameMenu"],
   components: { Instructions },
   data() {
     return {
@@ -36,7 +37,7 @@ export default {
 
 <style>
 .menu_container {
-  background-image: url("../../public/img/bg_menu_frame.png");
+  background-image: url("../assets/img/bg_menu_frame.png");
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -53,7 +54,7 @@ export default {
 
 @media (max-width: 426px) {
   .menu_container {
-    background-image: url("../../public/img/bg_menu_cell.png");
+    background-image: url("../assets/img/bg_menu_cell.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 30rem;

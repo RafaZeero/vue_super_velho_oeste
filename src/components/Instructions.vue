@@ -19,6 +19,7 @@
 <script>
 export default {
   props: ["header", "text"],
+  emits: ["close"],
   methods: {
     closeInstructions() {
       this.$emit("close");
